@@ -83,9 +83,17 @@ def difficultyPass(difficulty):
 def AITurn(board):
     simulationBoard = board
     validSpacesList = validSpaces(simulationBoard)
-    for i in range(len(board)):
-        for j in range(len(board[i])):
-            pass
+    moveWinsDict = {}
+
+    #Simulate, setting initial move
+    # for initialSpace in validSpacesList:
+    #     simulationBoard[initialSpace[0]][initialSpace[1]]
+    #20,000 random simulations
+    #for i in range(20000):
+
+
+
+          
 
     #if difficultpass = true, selected space is chosen, if false, select a random space
 
@@ -109,6 +117,9 @@ def main():
         playerTurn(mainBoard)
         #printBoardFunction(mainBoard)
         winCheck = boardWinCheck(mainBoard)
+        if (winCheck):
+            break
+        AITurn(mainBoard)
         print("YUH", winCheck)
 
 
